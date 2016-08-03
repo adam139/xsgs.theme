@@ -1,0 +1,11 @@
+<layers>
+    
+    <!-- Disable the Theme layer when uninstalled -->
+    
+    <layer
+        name="xsgs.theme"
+        interface="xsgs.theme.browser.interfaces.IThemeSpecific"
+        remove="True"
+        />
+
+</layers>
