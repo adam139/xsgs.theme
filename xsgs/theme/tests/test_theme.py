@@ -24,13 +24,11 @@ class TestSetup(unittest.TestCase):
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IThemeSettings)
         self.assertEqual(settings.enabled, True)
-        import pdb
-        pdb.set_trace()
         self.assertEqual(settings.rules, 
                 "/++theme++xsgs.theme/rules.xml"
             )
         self.assertEqual(settings.absolutePrefix,
-                "/++theme++xsgs.theme"
+                "/++theme++xsgs.theme/"
             )
 
 class TestRendering(unittest.TestCase):
@@ -39,14 +37,12 @@ class TestRendering(unittest.TestCase):
     
     def test_render_plone_page(self):
         app = self.layer['app']
-        portal = self.layer['portal']
-        
-        transaction.commit()
-        
+        portal = self.layer['portal']        
+        transaction.commit()        
         browser = Browser(app)
         #open('/tmp/test.html','w').write(browser.contents)    
         browser.open(portal.absolute_url())
-        self.assertTrue('<div id="site-scripts">' in browser.contents)
+        self.assertTrue('src="http://images.315ok.org/xsgs998/brand.png"' in browser.contents)
     
                 
     def test_render_zmi_page(self):

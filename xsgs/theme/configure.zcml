@@ -3,14 +3,8 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="xsgs.theme">
-
-
-  <include package="plone.app.theming" />  
-      
- 
-  <include package="Products.CMFCore" file="permissions.zcml" />
-
-  
+  <include package="plone.app.theming" />      
+  <include package="Products.CMFCore" file="permissions.zcml" />  
   <genericsetup:registerProfile
       name="default"
       title="xsgs.theme"
@@ -28,10 +22,10 @@
       />
 
   <!-- Diazo themes -->
-  <plone:static directory="theme" name="collective.diazotheme.bootstrap" type="theme"/>  
+  <plone:static directory="theme" name="xsgs.theme" type="theme"/>  
   <genericsetup:registerProfile
       name="uninstall"
-      title="xsgs.theme"
+      title="uninstall xsgs.theme"
       directory="profiles/uninstall"
       description="Uninstalls xsgs.theme package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
