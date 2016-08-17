@@ -145,7 +145,10 @@
     </aside>
 
     <footer id="portal-footer-wrapper" i18n:domain="plone">
-      <div tal:replace="structure provider:plone.portalfooter" />
+      <div class="col-xs-12 text-center">
+        <p class="pull-right"><a href="#">返回顶部</a></p>
+        <p>&copy; 2013 湘水公司 &middot; <a href="http://www.miibeian.gov.cn/">湘ICP备07003419</a></p>
+      </div>
     </footer>
 	<div id="bottom-js" class="hidden">
  		<metal:javascriptslot define-slot="javascript_bottom_slot" />	

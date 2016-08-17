@@ -26,13 +26,6 @@
     <!-- Script -->
 
     <after css:theme-children="head" css:content="head script" />
- <!--	<after css:theme-children="head">
- 		<script>
- 			require = undefined
- 			define = undefined
- 		</script>
- 	</after>
- -->
    	
   </rules>
 
